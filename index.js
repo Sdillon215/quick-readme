@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 // const generatePage = require('./src/page-template');
 // const { writeFile, copyFile } = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
-const questions = () => {
+const questions = userData => {
   return inquirer.prompt([
     {
       type: 'input',
@@ -96,7 +96,9 @@ const questions = () => {
         }
       }
     }
-  ]);
+  ]).then(data => {
+    console.log(data);
+  });
 };
 
 // // TODO: Create a function to write README file
