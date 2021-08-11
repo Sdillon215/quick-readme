@@ -82,7 +82,7 @@ const questions = userData => {
     },
     {
       type: 'checkbox',
-      name: 'badge',
+      name: 'license',
       choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
     },
     {
@@ -94,6 +94,18 @@ const questions = userData => {
           return true;
         } else {
           console.log('Please enter your github username');
+        }
+      }
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address?',
+      validate: emailInput => {
+        if (emailInput) {
+          return true;
+        } else {
+          console.log('Please enter your email address');
         }
       }
     }

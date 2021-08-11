@@ -10,10 +10,35 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+
+// const linkGen = linkText => {
+//   if (!confirmLink) {
+//     return '';
+//   } 
+
+//   return `## Deployed Link
+//   ${link}`
+// };
+
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data, confirmLink) {
   return `# ${data.title}
 
+## Description
+${data.description}
+
+## Insallation
+${data.steps}
+
+## Usage
+${data.examples}
+
+## Credits
+${data.collab}
+
+## Questions
+https://github.com/${data.github}
+${data.email}
 `;
 }
 
