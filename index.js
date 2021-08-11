@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-// const generatePage = require('./src/page-template');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 // const { writeFile, copyFile } = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = userData => {
@@ -82,7 +83,7 @@ const questions = userData => {
     {
       type: 'checkbox',
       name: 'badge',
-      choices: ['badge', 'badge', 'badge']
+      choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
     },
     {
       type: 'input',
@@ -98,11 +99,18 @@ const questions = userData => {
     }
   ]).then(data => {
     console.log(data);
+    return writeFile(data);
   });
 };
 
 // // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+const writeFile = data => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('README.md', generateMarkdown(data), err => {
+      if (err) throw err;
+    });
+  });
+};
 
 // // TODO: Create a function to initialize app
 // function init() {}
