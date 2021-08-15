@@ -33,18 +33,6 @@ const questions = userData => {
       }
     },
     {
-      type: 'confirm',
-      name: 'confirmLink',
-      message: 'Is your application deployed?',
-      default: true
-    },
-    {
-      type: 'input',
-      name: 'link',
-      message: 'Please provide the link!',
-      when: ({ confirmLink }) => confirmLink
-    },
-    {
       type: 'input',
       name: 'steps',
       message: 'Please provide step by step instructions on how to install and run the application.',
@@ -69,15 +57,9 @@ const questions = userData => {
       }
     },
     {
-      type: 'confirm',
-      name: 'confirmCollab',
-      message: 'Were there any collaborators?',
-      default: true
-    },
-    {
       type: 'input',
       name: 'collab',
-      message: 'Please provide their Github account!',
+      message: 'Please provide any collaborators Github account!',
       when: ({ confirmCollab }) => confirmCollab
     },
     {
