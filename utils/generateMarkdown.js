@@ -28,7 +28,12 @@ function generateMarkdown(data) {
 ${data.description}
 
 ## Table of Contents
-[Questions](ReadMe.md/##questions)
+[Description](ReadMe.md/#description)  
+[Installation](ReadMe.md/#installation)  
+[Usage](ReadMe.md/#usage)  
+[License](ReadMe.md/#license)  
+[Contributing](ReadMe.md/#contributing)  
+[Questions](ReadMe.md/##questions)  
 
 ## Insallation
 ${data.steps}
@@ -36,11 +41,13 @@ ${data.steps}
 ## Usage
 ${data.examples}
 
-## Credits
+## License
+
+## Contributing
 ${data.collab}
 
 ## Questions
-https://github.com/${data.github}
+https://github.com/${data.github}   
 ${data.email}
 `;
 }
