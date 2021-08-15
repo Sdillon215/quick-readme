@@ -4,7 +4,7 @@
 asd
 
 ## Table of Contents
-[Questions](ReadMe.md/##questions)
+[Questions](ReadMe.md/#questions)
 
 ## Insallation
 as
