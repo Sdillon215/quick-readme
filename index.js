@@ -59,7 +59,6 @@ const questions = userData => {
       type: 'input',
       name: 'collab',
       message: 'Please provide any collaborators Github account!',
-      when: ({ confirmCollab }) => confirmCollab
     },
     {
       type: 'checkbox',
@@ -91,7 +90,6 @@ const questions = userData => {
       }
     }
   ]).then(data => {
-    console.log(data);
     return writeFile(data);
   });
 };
