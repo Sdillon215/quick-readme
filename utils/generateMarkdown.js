@@ -42,6 +42,7 @@ ${data.steps}
 ${data.examples}
 
 ## License
+${data.license}
 
 ## Contributing
 ${data.collab}
